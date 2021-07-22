@@ -1,0 +1,12 @@
+services:
+    web:
+        build:
+            context: ./
+            target: dev
+        volumes:
+            - .:/src
+        command: npm run dev
+        ports: 
+            - "8000:8000"
+        environment:
+            NODE_ENV: development
